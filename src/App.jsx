@@ -1,0 +1,100 @@
+import React from 'react'
+import {Slideshow,Slide, TextoSlide} from './components/Slideshow'
+import './estilos.css'
+import img1 from './img/1.jpg'
+import img2 from './img/2.jpg'
+import img3 from './img/3.jpg'
+import img4 from './img/4.jpg'
+import styled from 'styled-components'
+
+function App() {
+  return (
+    <main>
+      <Titulo>Productos Destacados</Titulo>
+      <Slideshow>
+        <Slide>
+                <a href="http://chamocell.com">
+                    <img src={img1} alt="" />
+                </a>
+                <TextoSlide colorFondo="#ff8000" colorTexto="#000">
+                    <p>15% descuento en productos Apple</p>
+                </TextoSlide>
+            </Slide>
+
+            <Slide>
+                <a href="http://chamocell.com">
+                    <img src={img2} alt="" />
+                </a>
+                <TextoSlide>
+                    <p>15% descuento en productos Apple</p>
+                </TextoSlide>
+            </Slide>
+
+            <Slide>
+                <a href="http://chamocell.com">
+                    <img src={img3} alt="" />
+                </a>
+                <TextoSlide>
+                    <p>15% descuento en productos Apple</p>
+                </TextoSlide>
+            </Slide>
+
+            <Slide>
+                <a href="http://chamocell.com">
+                    <img src={img4} alt="" />
+                </a>
+                <TextoSlide>
+                    <p>15% descuento en productos Apple</p>
+                </TextoSlide>
+            </Slide>
+      </Slideshow>
+
+      <Titulo>Productos Destacados</Titulo>
+      <Slideshow controles={true} autoplay={true} velocidad="3000" intervalo="5000">
+        <Slide>
+                <a href="http://chamocell.com">
+                    <img src={img1} alt="" />
+                </a>
+                <TextoSlide colorFondo="#D60738" colorTexto="#fff">
+                    <p>15% descuento en productos Apple</p>
+                </TextoSlide>
+            </Slide>
+
+            <Slide>
+                <a href="http://chamocell.com">
+                    <img src={img2} alt="" />
+                </a>
+                <TextoSlide>
+                    <p>15% descuento en productos Apple</p>
+                </TextoSlide>
+            </Slide>
+
+            <Slide>
+                <a href="http://chamocell.com">
+                    <img src={img3} alt="" />
+                </a>
+                <TextoSlide>
+                    <p>15% descuento en productos Apple</p>
+                </TextoSlide>
+            </Slide>
+
+            <Slide>
+                <a href="http://chamocell.com">
+                    <img src={img4} alt="" />
+                </a>
+                <TextoSlide>
+                    <p>15% descuento en productos Apple</p>
+                </TextoSlide>
+            </Slide>
+      </Slideshow>
+    </main>
+  );
+}
+
+const Titulo = styled.p`
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+`;
+export default App;
